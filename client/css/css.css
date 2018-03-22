@@ -1,6 +1,7 @@
 .container {
 	display: inline-block;
 	width:  100%;
+	height: 50%;
 }
 
 #exampleImage {
@@ -10,13 +11,16 @@
 
 #exampleImage img {
 	width: 100%;
+	height: auto;
 }
 
 #tripletMapImage {
 	display: inline-block;
 	width: 48%;
+	height: auto;
 }
 
 #tripletMapImage canvas {
 	width: 100%;
+	height: auto;
 }

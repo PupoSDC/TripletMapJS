@@ -15,10 +15,13 @@
 
 <body>
 
-	<h1> Triplet Map! </h1>
+	<h1 id="title"> Triplet Map! </h1>
+
+	<input type="file" onchange="previewFile()"><br>
+
 	<div class = "container" >
 		<div id="exampleImage">
-			<img src="img/example.jpeg" >
+			<img id="originalImage" height="200" alt="Image preview...">
 		</div>
 		<div id ="tripletMapImage">
 			<canvas id="canvas"></canvas>

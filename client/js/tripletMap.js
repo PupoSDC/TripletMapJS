@@ -1,12 +1,28 @@
-var img = new Image();
 
-img.src = 'img/example.jpeg';
+function previewFile(){
+    var preview = document.querySelector('#originalImage'); //selects the query named img
+    var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+    var reader  = new FileReader();
+    var img     = new Image();
 
-img.onload = function() {
-  draw(this);
-};
+    reader.onloadend = function () {
+        preview.src = reader.result;
+        img.src     = reader.result;
+    }
 
-function draw(img) {
+    img.onload = function() {
+        tripletMap(this);
+    };
+
+    if (file) {
+        reader.readAsDataURL(file); //reads the data as a URL
+    } else {
+        preview.src = "";
+    }
+
+}
+
+function tripletMap(img) {
   var canvas = document.getElementById('canvas');
   var ctx = canvas.getContext('2d');
   canvas.width  = img.width;
@@ -43,5 +59,6 @@ function draw(img) {
     img.width*5/7, 0, img.width*2/7, img.height,  // source rectangle
     img.width*5/7, 0, img.width*2/7, img.height   // destination rectangle
   );
-
 }
+
+previewFile();
