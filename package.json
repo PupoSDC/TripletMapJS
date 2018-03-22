@@ -1,0 +1,11 @@
+{
+  "name": "tripletmap",
+  "version": "1.0.0",
+  "description": "A tripplet map web app, for giggles",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "pupoSDC",
+  "license": "ISC"
+}

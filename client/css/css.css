@@ -1,0 +1,22 @@
+.container {
+	display: inline-block;
+	width:  100%;
+}
+
+#exampleImage {
+	display: inline-block;
+	width: 48%;
+}
+
+#exampleImage img {
+	width: 100%;
+}
+
+#tripletMapImage {
+	display: inline-block;
+	width: 48%;
+}
+
+#tripletMapImage canvas {
+	width: 100%;
+}
